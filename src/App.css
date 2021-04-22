@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600;700&display=swap");
+@import url(https://fonts.googleapis.com/css?family=Poppins:700;);
+
+body {
+  font-family: "Quicksand", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-header {
+  align-items: center;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  height: 25vh;
+  padding: 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.app-header .header-logo {
+  height: 100%;
+}
+
+.app-header h1 {
+  font-display: 700;
+}
+
+.main-container {
+  padding: 2rem;
+}
+
+.films-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+/* Main Movie Cards */
+.film-card {
+  background-color: #79d8d8;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 16px;
+  height: 320px;
+  margin: 10px;
+  overflow: hidden;
+  position: relative;
+  text-align: left;
+}
+
+.film-card * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.45s ease;
+  transition: all 0.45s ease;
+}
+
+.film-card:after {
+  background-color: white;
+  opacity: 0.6;
+  top: 0;
+  bottom: 0;
+  content: "";
+  left: -100%;
+  position: absolute;
+  width: 100px;
+  box-shadow: 0 0 100px white;
+  -webkit-transform: skew(-20deg);
+  transform: skew(-20deg);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+.film-card img {
+  vertical-align: top;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.film-card figcaption {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  line-height: 1em;
+  opacity: 0;
+}
+
+.film-card h3 {
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+  font-size: 1.4em;
+  font-weight: 600;
+  line-height: 1.1em;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.film-card h3 span {
+  font-weight: 600;
+}
+
+.film-card a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.film-card:hover > img,
+.film-card.hover > img {
+  opacity: 0.4;
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+.film-card:hover:after,
+.snip1554.hover:after {
+  left: 200%;
+}
+
+.film-card:hover figcaption,
+.film-card.hover figcaption {
+  opacity: 1;
+}
+
+/* Film Extended Card */
+.extended-film-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.extended-film-container .extended-card-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.extended-poster-container {
+  padding: 1rem;
+}
+
+.extended-poster-container img {
+  height: 400px;
+}
