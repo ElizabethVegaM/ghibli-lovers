@@ -1,18 +1,38 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import kodama from '../images/kodama.png';
+import jiji from '../images/jiji.png';
+import calcifer from '../images/calcifer.png';
 
 const Navbar = () => {
+  const buttons = [{
+    'path': '/films',
+    'img': kodama,
+    'title': 'Movies'
+  },
+  {
+    'path': '/characters',
+    'img': jiji,
+    'title': 'Characters'
+  },
+  {
+    'path': '/locations',
+    'img': calcifer,
+    'title': 'Locations'
+  }];
+
   return(
-    <nav>
-      <Link to='/films'>
-        <button>Movies</button>
-      </Link>
-      <Link to='/characters'>
-        <button>Characters</button>
-      </Link>
-      <Link to='/locations'>
-        <button>Location</button>
-      </Link>
+    <nav className="header-navbar">
+      {buttons && buttons.map(el => {
+        return (
+          <Link to={el.path} key={el.title}>
+            <button className="navbar-btn">
+              <img src={el.img} alt=""/>
+              <span>{el.title}</span>
+            </button>
+          </Link>
+        )
+      })}
     </nav>
   )
 }
