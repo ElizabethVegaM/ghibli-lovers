@@ -18,9 +18,10 @@ const FilmExtendedCard = ({ info, history }) => {
 
   useEffect(() => {
     checkMovie(location.pathname !== "/films" ? true : false);
+    console.log(movieSelected);
   }, [location]);
 
-  let { path, url } = useRouteMatch();
+  let { path } = useRouteMatch();
   const handleClick = () => {
     history.goBack();
   };

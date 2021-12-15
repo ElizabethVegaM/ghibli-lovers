@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useHistory, Link  } from "react-router-dom";
+import React from "react";
+import { useHistory  } from "react-router-dom";
 
 const CharacterExtendedCard = ({ movie, info }) => {
   let history = useHistory();
